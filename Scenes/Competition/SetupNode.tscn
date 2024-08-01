@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfwq0xr0uj2wa"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/SetupNode.gd" id="1_gkxng"]
+[ext_resource type="PackedScene" uid="uid://cuwathqtqox0u" path="res://Scenes/Competition/PlayerNode.tscn" id="2_02dwf"]
+[ext_resource type="PackedScene" uid="uid://cdle7xnsglx4a" path="res://Scenes/Competition/HandNode.tscn" id="3_3ie5b"]
+[ext_resource type="PackedScene" uid="uid://bra31ewil1xmw" path="res://Scenes/Competition/TrashNode.tscn" id="4_u8wu5"]
+[ext_resource type="PackedScene" uid="uid://br3adctggprfq" path="res://Scenes/Competition/StockpileNode.tscn" id="5_3265u"]
+[ext_resource type="PackedScene" uid="uid://bfiu33ejpd8ww" path="res://Scenes/Competition/RecipeNode.tscn" id="6_ggak8"]
+
+[node name="SetupNode" type="Node2D"]
+script = ExtResource("1_gkxng")
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_02dwf")]
+
+[node name="HandNode" parent="." instance=ExtResource("3_3ie5b")]
+position = Vector2(0, 450)
+
+[node name="TrashNode" parent="." instance=ExtResource("4_u8wu5")]
+position = Vector2(-538, 105)
+
+[node name="StockpileNode" parent="." instance=ExtResource("5_3265u")]
+position = Vector2(-548, -198)
+
+[node name="RecipeNode" parent="." instance=ExtResource("6_ggak8")]
+position = Vector2(136, -496)

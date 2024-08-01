@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5q7ng86vve3s"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/StatChart.gd" id="1_l4k0d"]
+
+[node name="StatChart" type="Node2D"]
+script = ExtResource("1_l4k0d")
+
+[node name="PolyBackground" type="Polygon2D" parent="."]
+color = Color(1, 0.611765, 0, 1)
+polygon = PackedVector2Array(21, -65, 78, 33, -33, 68, -50, -25)
+
+[node name="PolyStats" type="Polygon2D" parent="."]
+
+[node name="LineHolder" type="Node2D" parent="."]

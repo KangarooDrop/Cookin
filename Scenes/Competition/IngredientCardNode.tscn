@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfkip5mm0dg6f"]
+
+[ext_resource type="PackedScene" uid="uid://bpj5phawbik74" path="res://Scenes/Competition/CardNode.tscn" id="1_3v802"]
+[ext_resource type="Shader" path="res://Shaders/decay.gdshader" id="2_3s3k0"]
+[ext_resource type="Script" path="res://Scripts/Competition/IngredientCardNode.gd" id="2_kynch"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vbxyg"]
+resource_local_to_scene = true
+shader = ExtResource("2_3s3k0")
+shader_parameter/t = 0.0
+
+[node name="IngredientCardNode" instance=ExtResource("1_3v802")]
+material = SubResource("ShaderMaterial_vbxyg")
+script = ExtResource("2_kynch")
+
+[node name="TagHolder" type="HBoxContainer" parent="ScaleBottomUp/ScaleCenter/Front/TextureRect" index="3"]
+modulate = Color(1, 1, 1, 0)
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = -160.0
+offset_right = 130.0
+offset_bottom = -32.0
+grow_horizontal = 2
+alignment = 1

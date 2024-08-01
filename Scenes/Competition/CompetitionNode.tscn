@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cufkrq0kvimtt"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/CompetitionNode.gd" id="1_5gxpy"]
+[ext_resource type="PackedScene" uid="uid://bgsnvtfu1lawb" path="res://Scenes/Competition/JudgeNode.tscn" id="2_41vpo"]
+
+[node name="Competition" type="Node2D"]
+script = ExtResource("1_5gxpy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="JudgeNode" parent="." instance=ExtResource("2_41vpo")]

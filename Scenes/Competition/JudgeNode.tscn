@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgsnvtfu1lawb"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/JudgeNode.gd" id="1_lbs5y"]
+[ext_resource type="Texture2D" uid="uid://dyih8ts7jy83q" path="res://Art Assets/judge/judge_temp.png" id="2_nbn8m"]
+
+[node name="JudgeNode" type="Node2D"]
+script = ExtResource("1_lbs5y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nbn8m")

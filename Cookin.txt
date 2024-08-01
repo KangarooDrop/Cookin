@@ -1,0 +1,72 @@
+Cookin
+
+Judges:
+	1 preference (e.g. Spicy, e.g. Umami)
+	1 dislike (e.g. mint, e.g. sour)
+	Every X turns, discusses the actions/recipe of each player
+		e.g. talks about the potent aroma coming from P1's roasted garlic
+			if it is providing the most points
+		e.g. not really sure what P2 is doing but excited to see the results
+			if nothing is providing many points
+
+Recipe:
+	Play cards in order to create a recipe
+	Ingredients are counted in top-down order but can affect other ingredients
+		e.g. salt - gives +1 flavor to all previous ingredients or -3 for each if salt is >3
+	The player who finishes their dish with the highest score (flavor + texture + aroma + chemesthesis) is awared the winner
+		In the event of a tie, 3 different random judges are chosen with different likes/disklikes such taht a tie does not occur
+
+Ingedients:
+	Food items which can be added to your recipe
+	Contain tags and components which affect the overall finished dish
+		e.g. Mint - +1 Chemesthesis
+		e.g. Fried garlic - +1 Aroma, +1 Texture, -1 Flavor to all ingredients after
+		e.g. Green Onion Tops - +1 Texture, +1 Flavor to all ingredients before
+
+Actions:
+	Cards which can affect your recipe, opponents recipe, or ingredients in your hand
+		e.g. Slight of Hand - Can only be played if your opponent has no energy. 
+					Add an ingredient from your hand to your opponent's recipe
+		e.g. Roast - Turn an ingredient in your hand into its roasted equivalent (garlic -> roasted, bread -> croutons)
+		e.g. Purge - Remove all ingredients from your recipe
+		e.g. Bake - Roast all ingredients in your recipe
+		e.g. Rotate Produce - Choose and discard up to 2 ingredients and draw that many
+		e.g. Pilfer - Take a random ingredient from you opponents stockpile and add it to your hand
+		e.g. Smoke Break - (2) - Gain (2) Energy next turn
+		e.g. Peek - Reveal 3 ingredients from your opponent's recipe
+		e.g. Distract - Turn your opponents most recent recipe ingredient into "Overcooked Mush" (-1 in everything)
+		e.g. Stalker - Add copies of 2 actions and 2 ingredients from your opponents stockpile to yours
+
+Gameplay:
+	Setup:
+		The judge is revealed
+		Each player draws X cards and may mulligan
+		One player is randomly chose to be cooking (they act first)
+	Turn phases:
+		Start:
+			Each player sets their energy to 4/6
+			Trigger all start of turn effects
+		Play:
+			The player who is cooking may:
+				Play an action card (may require energy)
+				Add an ingredient to their recipe
+				Pass
+			The other player is now cooking
+			Repeat until both players pass consecutively
+		End:
+			Players may discard up to 1 card
+			Players then draw up to X cards
+			The player who was not cooking at the start of the turn is now cooking
+		Notes:
+			If a player's stockpile is empty and they would draw a card, first shuffle their discard into their stockpile
+	End:
+		After Y (6?) turns, the clock has run out
+		Each player presents their recipe (dish) to the judge
+		Points are scored and a winner is chosen
+		
+		Provides a printable recipe card for players based on their and opponent's recipes
+
+
+
+
+

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cimff5n1uxef7"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/TagNode.gd" id="1_416pc"]
+[ext_resource type="Texture2D" uid="uid://d1w4ssg5gsoe" path="res://Art Assets/card/tags.png" id="2_ueogh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytqya"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ueogh")
+region = Rect2(0, 0, 128, 128)
+
+[node name="TagNode" type="Control"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_416pc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = -24.0
+offset_right = 64.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center][color=rec]SPICY[/color][/center]"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_ytqya")

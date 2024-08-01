@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtqdrgvvvnpck"]
+
+[ext_resource type="Script" path="res://Scripts/Competition/ComponentNode.gd" id="1_o4rq4"]
+[ext_resource type="Texture2D" uid="uid://d1vtnoifsr3w3" path="res://Art Assets/recipe/recipe_ingredient_background.png" id="2_was7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rate"]
+size = Vector2(200, 47)
+
+[node name="RecipeIngredientNode" type="Node2D"]
+script = ExtResource("1_o4rq4")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -23.5
+offset_right = 100.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_was7o")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Chickpeas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6rate")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="onMouseEntered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="onMouseExited"]

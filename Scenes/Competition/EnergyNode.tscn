@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://coejvbl7foqd8"]
+
+[ext_resource type="Texture2D" uid="uid://bfjuaiodroh1r" path="res://Art Assets/ui/energy_holder_temp.png" id="1_i4wf2"]
+[ext_resource type="Script" path="res://Scripts/Competition/EnergyNode.gd" id="1_q3vnn"]
+[ext_resource type="Texture2D" uid="uid://lsi4lfo3ddaf" path="res://Art Assets/ui/energy_temp.png" id="2_k81ll"]
+
+[node name="EnergyNode" type="Node2D"]
+script = ExtResource("1_q3vnn")
+
+[node name="EnergySocket" type="Sprite2D" parent="."]
+texture = ExtResource("1_i4wf2")
+
+[node name="EnergySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_k81ll")
